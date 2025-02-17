@@ -1,0 +1,874 @@
+
+
+  #presentation {
+    text-align: center;
+    padding: 2rem;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    #txt-h {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+
+  }
+
+
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+
+// header
+ion-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+ion-toolbar {
+  --background: #02376b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px; /* Ajuste la hauteur si nécessaire */
+}
+
+#menu-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#menu-header ion-segment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+ion-segment-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+ion-label {
+  color: #eee;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-segment-button:hover{
+  background-color: #eab308;
+}
+
+// background content color
+ion-content {
+  --background: #ffffff; 
+}
+
+ion-segment-button ion-icon {
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
+
+
+
+
+
+// section acceuil
+#acceuil{
+
+}
+
+#presentation{
+  padding: 330px 150px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-image:
+  url('https://images.unsplash.com/photo-1593720213428-28a5b9e94613?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  animation: fadeIn 1s ease-in-out;
+  -webkit-animation: fadeIn 1s ease-in-out;
+}
+
+#presentation h1{
+  font-size: 50px;
+  color: white;
+  animation: slideInUp 1s ease-in-out;
+}
+
+#presentation p{
+  font-size: 20px;
+  color: white;
+  animation: slideInUp 1.5s ease-in-out;
+}
+
+#presentation a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  animation: slideInUp 2s ease-in-out;
+}
+
+.btn{
+  margin-top: 50px;
+  padding: 20px 50px;
+  background-color: #02376b;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  -ms-border-radius: 5;
+  -o-border-radius: 5;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover{
+  background-color: #eab308;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  
+}
+
+
+
+
+// section a propos
+
+.bg-color{
+  background-color: #ffffff;
+  border-radius: none;
+  border: none;
+  box-shadow: none;
+}
+
+h2{
+  font-size: 24px;
+  font-weight: bold;
+  color: #02376b;
+  text-align: center;
+}
+
+#apropos-p p{
+  font-size: 16px;
+  color: #333333;
+  font-weight: normal;
+}
+
+#apropos-p{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  max-width: 900px;
+  max-height: 500px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+// section competences
+
+.skill-card ion-card-title{
+  text-align: center;
+}
+
+
+#skills-p{
+  text-align: center;
+  padding: 50px 100px;
+  padding-top: 10px;
+
+
+}
+
+.skills-section ion-card-header{
+  background-color: #02376b;
+}
+
+
+#skills{
+  padding: 50px 100px;
+  gap: 30px;
+  display: flex;
+  max-width: 900px;
+}
+
+.skills-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+  -webkit-animation: fadeIn 1s ease-in-out;
+}
+
+.skills-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.skills-description {
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.skills-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px; /* Espacement entre les cartes */
+}
+// card conetnu dans le card principale
+.skill-card {
+  display:flow-root flex;
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+
+ion-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+ion-card-title {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+ion-card-content {
+  padding: 10px;
+}
+
+ion-thumbnail img {
+  width: 30px;
+  height: 30px;
+}
+
+ion-progress-bar {
+  margin-top: 5px;
+  height: 8px;
+}
+
+@media (max-width: 768px) {
+  .skills-flex-container {
+    justify-content: center; /* Centrer les cartes sur les petits écrans */
+  }
+
+  .skill-card {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+
+
+
+
+
+
+// Section projet
+
+.projects-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto; /* Permet le défilement horizontal sur mobile */
+  padding: 10px;
+  margin-bottom: 100px;
+  justify-content: center;
+}
+
+.project-card {
+  flex: 0 0 250px; /* Taille fixe pour chaque carte */
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  min-width: 250px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.card-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+  
+
+}
+
+.card-background:hover{
+  filter: brightness(1);
+   
+}
+
+.project-title {
+  position: relative;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  z-index: 2;
+}
+
+
+
+
+
+// section experiences
+
+.title-experience{
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+}
+
+#experience{
+  background-color: #222;
+  padding-bottom: 20px;
+}
+
+
+#exp{
+  padding: 50px 100px;
+  gap: 30px;
+  display: flex;
+  max-width: 900px;
+
+}
+
+
+.accordion-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+ion-accordion-group {
+  width: 100%;
+}
+
+.experience-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  animation: fadeIn 1s ease-in-out;
+  padding-top: 50px;
+}
+
+.professionnelles ion-label{
+  font-weight: lighter;
+}
+
+.scolaires ion-label{
+  font-weight: lighter;
+}
+
+.professionnelles, .scolaires {
+  flex: 1;
+  max-width: 48%;
+  min-width: 300px;
+}
+
+ion-accordion-group {
+  width: 100%;
+}
+
+/* Style de l'accordéon */
+.accordion-header {
+  --background: #f4f4f4;
+  --color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Effet au survol */
+.accordion-header:hover {
+  --background: #e0e0e0;
+}
+
+/* Accordéon ouvert */
+ion-accordion[expanded] .accordion-header {
+  --background: white !important;
+  --color: #222 !important;
+}
+
+/* Changement d'icône */
+ion-accordion[expanded] .icon-toggle {
+  content: url("https://fonts.gstatic.com/s/i/materialicons/remove/v4/24px.svg");
+}
+
+/* Style par défaut */
+.accordion-header {
+  --background: #022a5b;
+  --color: rgb(255, 255, 255);
+  transition: background 0.3s, color 0.3s;
+}
+
+// couleur au survol
+.accordion-header:hover{
+  --background: #eab308;
+  --color: rgb(255, 255, 255);
+}
+
+::content p{
+  color: #ffffff;
+}
+
+
+
+
+// Section contact
+
+#contact{
+  background-color: #222;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  margin-bottom: 100px;
+  animation: fadeIn 1s ease-in-out;
+}
+.contact-container ion-card-header {
+  background-color: #022a5b;
+}
+
+.btn-send:hover{
+  --background: #eab308;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1;
+  min-width: 100px;
+}
+
+.contact-info ion-card {
+  text-align: center;
+}
+
+.contact-form ion-card {
+  width: 100%;
+}
+
+.linkedin-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.linkedin-logo {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.linkedin-logo:hover {
+  transform: scale(1.1);
+}
+
+
+.contact-info a{
+  text-decoration: none;
+}
+
+
+
+// footer
+
+.footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #f4b400;
+  color: white;
+  font-size: 14px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.footer a {
+  color: #f4b400;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+// responisve
+
+/* Ajustement pour mobile */
+
+
+@media screen and (max-width: 768px) {
+  // GESTION ACCEUIL
+  h1 , #txt-h{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  // GESTION DU HEADER
+  ion-label {
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  // GESTION DU SEGMENT
+  ion-segment {
+  
+    padding-right: 80px; 
+    gap: 0; /* Si un espace (gap) est défini par défaut */
+  }
+  
+  ion-segment-button {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  // section competences responsive
+  .skills-flex-container {
+      margin-left: 100px;
+
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .skill-card ion-card{
+      margin: 5px;
+  }
+
+  // section porjet responsive
+  .projects-container {
+      flex-direction: column;
+  }
+
+
+// section experience responsive
+.experience-container {
+  flex-direction: column;
+  
+}
+
+.professionnelles {
+  margin: 0 auto;
+}
+
+.scolaires{
+  margin: 0 auto;
+}
+
+
+  
+
+}
+
+/* Ajustement pour tablette */
+@media screen and (max-width: 1024px) {
+  #p-header{
+    font-size: 2Opx;
+  }
+
+  // section competences responsive
+  .skills-flex-container {
+    margin: 0 auto;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+
+}
+
+
+ 
+// Add animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+// Apply animations to sections
+#presentation {
+  animation: fadeIn 1s ease-in-out;
+}
+
+#presentation h1 {
+  animation: slideInUp 1s ease-in-out;
+}
+
+#presentation p {
+  animation: slideInUp 1.5s ease-in-out;
+}
+
+#presentation a {
+  animation: slideInUp 2s ease-in-out;
+}
+
+#apropos-img {
+  animation: slideInLeft 1s ease-in-out;
+}
+
+#apropos-p {
+  animation: slideInRight 1s ease-in-out;
+}
+
+.skills-section {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.project-card {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.experience-container {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.contact-container {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.footer {
+  animation: fadeIn 1s ease-in-out;
+}
+
+// Adjust sizes and fonts
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  transition: background 0.3s ease, color 0.3s ease;
+  -webkit-transition: background 0.3s ease, color 0.3s ease;
+  -moz-transition: background 0.3s ease, color 0.3s ease;
+  -ms-transition: background 0.3s ease, color 0.3s ease;
+  -o-transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+
+
+// Section Skills
+.skills-section {
+  padding: 4rem 2rem;
+  background: #f5f5f5;
+
+  .skills-card {
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+    .skills-title {
+      font-size: 2rem;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    .skills-description {
+      color: #ffffff;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .skills-flex-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .skill-card {
+    ion-card:hover {
+      margin: 0;
+      height: 100%;
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 15px #575655;;
+
+
+      ion-card-header {
+        background: #022a5b;
+
+        h3 {
+          font-size: 1.2rem;
+          color: #333;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .skill-item {
+    margin-bottom: 1.5rem;
+
+    .skill-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+
+      img {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+      }
+
+      span {
+        font-size: 1rem;
+        color: #444;
+      }
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: #eee;
+      border-radius: 4px;
+      overflow: hidden;
+
+      .progress {
+        height: 100%;
+        background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+        border-radius: 4px;
+        transition: width 1s ease-out;
+      }
+    }
+  }
+}
+
+
+
+
+

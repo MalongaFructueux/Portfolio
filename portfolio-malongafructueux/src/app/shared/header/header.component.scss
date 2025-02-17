@@ -1,0 +1,18 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-light: #ffffff;
+  --background-dark: #121212;
+  --text-light: #333333;
+  --text-dark: #ffffff;
+}
+
+.dark-theme {
+  --ion-background-color: var(--background-dark);
+  --ion-text-color: var(--text-dark);
+}
+
+.light-theme {
+  --ion-background-color: var(--background-light);
+  --ion-text-color: var(--text-light);
+}

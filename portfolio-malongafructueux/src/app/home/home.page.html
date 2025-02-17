@@ -1,0 +1,344 @@
+<ion-content>
+<!-- header -->
+  <ion-header>
+    <ion-toolbar>
+      <!-- Contenu de gauche (éléments de navigation) -->
+      <ion-buttons slot="end" id="menu-header">
+        <ion-menu-toggle auto-hide="false">
+          <ion-segment>
+            <ion-segment-button (click)="scrollToSection('acceuil')">
+              <ion-icon name="home" slot="start"></ion-icon>
+              <ion-label>Accueil</ion-label>
+            </ion-segment-button>
+            <ion-segment-button (click)="scrollToSection('a-propos')">
+              <ion-icon name="person" slot="start"></ion-icon>
+              <ion-label>À Propos</ion-label>
+            </ion-segment-button>
+            <ion-segment-button (click)="scrollToSection('competences')">
+              <ion-icon name="code-working" slot="start"></ion-icon>
+              <ion-label>Compétences</ion-label>
+            </ion-segment-button>
+            <ion-segment-button (click)="scrollToSection('projets')">
+              <ion-icon name="folder" slot="start"></ion-icon>
+              <ion-label>Projets</ion-label>
+            </ion-segment-button>
+            <ion-segment-button (click)="scrollToSection('experience')">
+              <ion-icon name="briefcase" slot="start"></ion-icon>
+              <ion-label>Expériences</ion-label>
+            </ion-segment-button>
+            <ion-segment-button (click)="scrollToSection('contact')">
+              <ion-icon name="mail" slot="start"></ion-icon>
+              <ion-label>Contact</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </ion-menu-toggle>
+      </ion-buttons>
+
+  
+  </ion-toolbar>
+</ion-header>
+
+
+
+  <!-- section acceuil -->
+  <section id="acceuil">
+   <div id="presentation">
+    <h1>MALONGA FRUCTUEUX</h1>
+    <p id="txt-h">Developpeur web & Mobile</p>
+
+       <!-- link -->
+        <button (click)="scrollToSection('a-propos')" class="btn">QUI SUIS-JE</button>
+   </div>
+  </section>
+
+
+
+
+ <!-- section à propos -->
+ <section id='a-propos'>
+  <ion-card class="bg-color">
+    <ion-card-content>
+    <ion-card-header>
+      <h2> À Propos </h2>
+    </ion-card-header>
+
+   <div id="apropos-p">
+  <p>
+    Titulaire d'une licence en Administration des Systèmes Web et Réseaux, je suis actuellement étudiant en Titre Professionnel Développeur Web et Mobile. 
+  </p><br>
+  <p>
+      Mon parcours m'a permis d'acquérir des compétences variées en développement web, gestion de bases de données et conception d'interfaces utilisateur. 
+    </p><br>
+    <p>
+    J'ai notamment effectué un stage enrichissant à l'ASECNA en tant qu'Agent RSI, renforçant ainsi mon expérience professionnelle.
+  </p>
+  <button  (click)="scrollToSection('contact')" class="btn" >CONTACTEZ MOI</button>
+   </div>
+
+    </ion-card-content>
+  </ion-card>
+</section>
+
+
+
+
+<!-- section competences -->
+<section id="competences" class="skills-section">
+  <ion-card class="skills-card">
+    <ion-card-header>
+      <h2 class="skills-title">Mes Compétences</h2>
+      <p class="skills-description">
+        Mes compétences évoluent constamment grâce à ma passion pour le développement.
+      </p>
+    </ion-card-header>
+
+    <ion-card-content>
+      <!-- Disposition en flex -->
+      <div class="skills-flex-container">
+        <!-- Utilisation de *ngFor pour itérer sur les compétences et afficher les éléments -->
+        <div class="skill-card"
+        *ngFor="let competence of competences;">
+     <ion-card>
+       <ion-card-header>
+         <ion-card-title>{{ competence.titre }}</ion-card-title>
+       </ion-card-header>
+       <ion-card-content>
+
+           <div class="scroll-content">
+             <div *ngFor="let skill of competence.items" class="skill-slide">
+               <ion-item>
+                 <ion-thumbnail slot="start">
+                   <img [src]="skill.icon" alt="{{ skill.nom }}" />
+                 </ion-thumbnail>
+                 <ion-label>{{ skill.nom }}</ion-label>
+               </ion-item>
+               <ion-progress-bar [value]="skill.progress"></ion-progress-bar>
+             </div>
+           </div>
+       </ion-card-content>
+     </ion-card>
+   </div>
+
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</section>
+
+
+
+
+<!-- section projets -->
+<section id="projets">
+  <h2 class="title-projets">Projets</h2>
+  <div class="projects-container">
+    <!-- Ma maquette musique -->
+    <ion-card class="project-card" (click)="openProject('https://github.com/MalongaFructueux/Portfolio/tree/7801888663e3b257ab59a3fdd4fdf1ba19346992/Maquette%20site%20web%20musique/Maquette')">
+      <div class="card-background" style="background-image: linear-gradient(to top, rgba(2, 55, 107, 0.8), rgba(2, 55, 107, 0.4), transparent),
+                    url('assets/conductor-5507703_640.jpg');">
+        <ion-card-header>
+          <ion-card-title class="project-title">Maquette Site web de musique</ion-card-title>
+        </ion-card-header>
+      </div>
+    </ion-card>
+
+    <!-- a maquette restaurant  -->
+    <ion-card class="project-card" (click)="openProject('https://github.com/MalongaFructueux/Portfolio/tree/7801888663e3b257ab59a3fdd4fdf1ba19346992/Maquette%20site%20web%20restaurant')">
+      <div class="card-background" style="background-image: linear-gradient(to top, rgba(2, 55, 107, 0.8), rgba(2, 55, 107, 0.4), transparent),
+                    url('assets/img1.jpg');">
+        <ion-card-header>
+          <ion-card-title class="project-title">Maquette Site web restaurant</ion-card-title>
+        </ion-card-header>
+      </div>
+    </ion-card>
+
+    <!-- mon porftolio -->
+    <ion-card class="project-card" (click)="openProject('https://github.com/MalongaFructueux/Portfolio/tree/7801888663e3b257ab59a3fdd4fdf1ba19346992/Maquette%20site%20web%20restaurant')">
+      <div class="card-background" style="background-image: linear-gradient(to top, rgba(2, 55, 107, 0.8), rgba(2, 55, 107, 0.4), transparent),
+                    url('assets/Monportfolio.png');">
+        <ion-card-header>
+          <ion-card-title class="project-title">Mon porftolio</ion-card-title>
+        </ion-card-header>
+      </div>
+    </ion-card>
+  </div>
+</section>
+
+
+
+
+
+<!-- Section Expériences -->
+<section id="experience">
+  <h2>Expériences & Formation</h2>
+
+  <div class="experience-container">
+    <!-- Expériences Professionnelles -->
+    <div class="professionnelles">
+      <ion-item class="title-experience">Professionnelles</ion-item>
+      <ion-accordion-group>
+        <ion-accordion value="admin-reseaux">
+          <ion-item slot="header" class="accordion-header">
+            <ion-label>Administration réseaux</ion-label>
+            <ion-icon class="icon-toggle" name="add-outline" slot="end"></ion-icon>
+          </ion-item>
+          <div slot="content">
+            <h3>ASECNA</h3>
+            <p>2023-2024</p>
+            <h6>Stagiaire Réseau et Système Informatique</h6>
+            <ul>
+              <li>Administration des serveurs Thales et SAPI, gestion des rôles (Active Directory, DNS, DHCP).</li>
+              <li>Câblage et sécurité des réseaux.</li>
+              <li>Gestion de base de données TOPSKY.</li>
+              <li>Installation et entretien des systèmes de radiocommunication, tout en participant à la logistique technique des infrastructures réseau.</li>
+            </ul>
+          </div>
+        </ion-accordion>
+
+        <ion-accordion value="dev-web">
+          <ion-item slot="header" class="accordion-header">
+            <ion-label>Développement web</ion-label>
+            <ion-icon class="icon-toggle" name="add-outline" slot="end"></ion-icon>
+          </ion-item>
+          <div slot="content">
+            <h3>Ministère des Mines de Brazzaville</h3>
+            <p>2023-2024</p>
+            <h6>Stagiaire Développeur Web</h6>
+            <ul>
+              <li>Intégration de fonctionnalités interactives sur le site web du Ministère.</li>
+              <li>Test et débogage des outils numériques avant leur déploiement.</li>
+              <li>Assistance technique auprès des agents pour l’utilisation des outils numériques.</li>
+            </ul>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+    </div>
+
+    <!-- Expériences Scolaires -->
+
+    <div class="scolaires">
+      <ion-item class="title-experience">Cursus Scolaires</ion-item>
+
+      <ion-accordion-group>
+      <ion-accordion value="bac">
+        <ion-item slot="header" class="accordion-header">
+          <ion-label>Titre Professionnel Dev Web et Mobile</ion-label>
+          <ion-icon class="icon-toggle" name="add-outline" slot="end"></ion-icon>
+        </ion-item>
+        <div slot="content">
+          <h3>SCHOLIA</h3>
+          <p>2024-2025</p>
+          <h6>Etudiant en Développement web et mobile</h6>
+        </div>
+      </ion-accordion>
+
+
+        <ion-accordion value="licence">
+          <ion-item slot="header" class="accordion-header">
+            <ion-label>Licence Web & Réseaux</ion-label>
+            <ion-icon class="icon-toggle" name="add-outline" slot="end"></ion-icon>
+          </ion-item>
+          <div slot="content">
+            <h3>Université IUB</h3>
+            <p>2021-2023</p>
+            <h6>Étudiant en Administration systeme Web et Réseaux</h6>
+          </div>
+        </ion-accordion>
+
+
+
+        <ion-accordion value="certif">
+          <ion-item slot="header" class="accordion-header">
+            <ion-label>Certifications & Formations</ion-label>
+            <ion-icon class="icon-toggle" name="add-outline" slot="end"></ion-icon>
+          </ion-item>
+          <div slot="content">
+            <ul>
+              <li>Certification FreeCodeCamp</li>
+            </ul>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+    </div>
+  </div>
+</section>
+
+
+  <!-- section contact -->
+
+  <section id="contact">
+    <h2 class="title">Contactez-moi</h2>
+    <div class="contact-container">
+      <!-- Colonne gauche -->
+      <div class="contact-info">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Email</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <a href="mailto:malongafructueux48&#64;gmail.com">malongafructueux48&#64;gmail.com</a>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Téléphone</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <a href="tel:+33618375403">06 18 37 54 03</a>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Bouton LinkedIn -->
+        <div class="linkedin-container">
+          <a href="https://www.linkedin.com/in/fructueux-malonga-121005334" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icon/linkedin_3536505.png" alt="LinkedIn" class="linkedin-logo">
+          </a>
+        </div>
+      </div>
+
+      <!-- Colonne droite (Formulaire) -->
+      <div class="contact-form">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Envoyez-moi un message</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            
+              <form (ngSubmit)="submitForm()">
+                <ion-item>
+                  <ion-label position="stacked">Nom</ion-label>
+                  <ion-input type="text" [(ngModel)]="name" name="name" required></ion-input>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-label position="stacked">Email</ion-label>
+                  <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-label position="stacked">Message</ion-label>
+                  <ion-textarea [(ngModel)]="message" name="message" required></ion-textarea>
+                </ion-item>
+            
+                <ion-button expand="full" type="submit" [disabled]="isLoading">
+                  {{ isLoading ? 'Envoi en cours...' : 'Envoyer' }}
+                </ion-button>
+            
+                <p *ngIf="formSubmitted" style="color: green; text-align: center;">Message envoyé avec succès !</p>
+              </form>            
+            
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </section>
+
+
+
+    <footer class="footer">
+      <p>&copy; 2024 Malonga Fructueux Bienheureux. Tous droits réservés.</p>
+    </footer>
+
+
+</ion-content>
