@@ -54,9 +54,6 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "env": {
-                "NG_APP_FIREBASE_API_KEY": "AIzaSyDKCZPTg5piLEFGxTgcUAT05xeihIRuI-s"
-              },
               "outputHashing": "all"
             },
             "development": {
