@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   firebaseConfig: {
-    apiKey: "AIzaSyDKCZPTg5piLEFGxTgcUAT05xeihIRuI-s",
+    apiKey: process.env["NG_APP_FIREBASE_API_KEY"],
     authDomain: "mon-portfolio---malonga.firebaseapp.com",
     projectId: "mon-portfolio---malonga",
     storageBucket: "mon-portfolio---malonga.firebasestorage.app",
