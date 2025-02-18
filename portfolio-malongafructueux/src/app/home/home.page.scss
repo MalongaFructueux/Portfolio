@@ -1,24 +1,22 @@
+#presentation {
+  text-align: center;
+  padding: 2rem;
 
-
-  #presentation {
-    text-align: center;
-    padding: 2rem;
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-
-    #txt-h {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-      opacity: 0.9;
-    }
-
-
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
+
+  #txt-h {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+
+}
 
 
 #container {
@@ -63,7 +61,8 @@ ion-toolbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px; /* Ajuste la hauteur si nécessaire */
+  height: 60px;
+  /* Ajuste la hauteur si nécessaire */
 }
 
 #menu-header {
@@ -98,13 +97,13 @@ ion-label {
   align-items: center;
 }
 
-ion-segment-button:hover{
+ion-segment-button:hover {
   background-color: #eab308;
 }
 
 // background content color
 ion-content {
-  --background: #ffffff; 
+  --background: #ffffff;
 }
 
 ion-segment-button ion-icon {
@@ -118,34 +117,32 @@ ion-segment-button ion-icon {
 
 
 // section acceuil
-#acceuil{
+#acceuil {}
 
-}
-
-#presentation{
+#presentation {
   padding: 330px 150px;
   height: 100%;
   width: 100%;
   text-align: center;
   background-image:
-  url('https://images.unsplash.com/photo-1593720213428-28a5b9e94613?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    url('https://images.unsplash.com/photo-1593720213428-28a5b9e94613?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   animation: fadeIn 1s ease-in-out;
   -webkit-animation: fadeIn 1s ease-in-out;
 }
 
-#presentation h1{
+#presentation h1 {
   font-size: 50px;
   color: white;
   animation: slideInUp 1s ease-in-out;
 }
 
-#presentation p{
+#presentation p {
   font-size: 20px;
   color: white;
   animation: slideInUp 1.5s ease-in-out;
 }
 
-#presentation a{
+#presentation a {
   text-decoration: none;
   color: rgb(0, 0, 0);
   font-size: 20px;
@@ -155,7 +152,7 @@ ion-segment-button ion-icon {
   animation: slideInUp 2s ease-in-out;
 }
 
-.btn{
+.btn {
   margin-top: 50px;
   padding: 20px 50px;
   background-color: #02376b;
@@ -174,11 +171,11 @@ ion-segment-button ion-icon {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: #eab308;
   transform: scale(1.1);
   transition: transform 0.3s ease;
-  
+
 }
 
 
@@ -186,27 +183,27 @@ ion-segment-button ion-icon {
 
 // section a propos
 
-.bg-color{
+.bg-color {
   background-color: #ffffff;
   border-radius: none;
   border: none;
   box-shadow: none;
 }
 
-h2{
+h2 {
   font-size: 24px;
   font-weight: bold;
   color: #02376b;
   text-align: center;
 }
 
-#apropos-p p{
+#apropos-p p {
   font-size: 16px;
   color: #333333;
   font-weight: normal;
 }
 
-#apropos-p{
+#apropos-p {
   padding-top: 30px;
   padding-bottom: 30px;
   max-width: 900px;
@@ -223,12 +220,12 @@ h2{
 
 // section competences
 
-.skill-card ion-card-title{
+.skill-card ion-card-title {
   text-align: center;
 }
 
 
-#skills-p{
+#skills-p {
   text-align: center;
   padding: 50px 100px;
   padding-top: 10px;
@@ -236,12 +233,12 @@ h2{
 
 }
 
-.skills-section ion-card-header{
+.skills-section ion-card-header {
   background-color: #02376b;
 }
 
 
-#skills{
+#skills {
   padding: 50px 100px;
   gap: 30px;
   display: flex;
@@ -276,11 +273,13 @@ h2{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 15px; /* Espacement entre les cartes */
+  gap: 15px;
+  /* Espacement entre les cartes */
 }
+
 // card conetnu dans le card principale
 .skill-card {
-  display:flow-root flex;
+  display: flow-root flex;
   width: 100%;
   max-width: 250px;
   margin-bottom: 20px;
@@ -315,7 +314,8 @@ ion-progress-bar {
 
 @media (max-width: 768px) {
   .skills-flex-container {
-    justify-content: center; /* Centrer les cartes sur les petits écrans */
+    justify-content: center;
+    /* Centrer les cartes sur les petits écrans */
   }
 
   .skill-card {
@@ -335,14 +335,16 @@ ion-progress-bar {
 .projects-container {
   display: flex;
   gap: 15px;
-  overflow-x: auto; /* Permet le défilement horizontal sur mobile */
+  overflow-x: auto;
+  /* Permet le défilement horizontal sur mobile */
   padding: 10px;
   margin-bottom: 100px;
   justify-content: center;
 }
 
 .project-card {
-  flex: 0 0 250px; /* Taille fixe pour chaque carte */
+  flex: 0 0 250px;
+  /* Taille fixe pour chaque carte */
   height: 200px;
   display: flex;
   align-items: center;
@@ -362,13 +364,13 @@ ion-progress-bar {
   background-size: cover;
   background-position: center;
   filter: brightness(0.7);
-  
+
 
 }
 
-.card-background:hover{
+.card-background:hover {
   filter: brightness(1);
-   
+
 }
 
 .project-title {
@@ -385,20 +387,20 @@ ion-progress-bar {
 
 // section experiences
 
-.title-experience{
+.title-experience {
   font-size: 24px;
   font-weight: bold;
   color: #ffffff;
   text-align: center;
 }
 
-#experience{
+#experience {
   background-color: #222;
   padding-bottom: 20px;
 }
 
 
-#exp{
+#exp {
   padding: 50px 100px;
   gap: 30px;
   display: flex;
@@ -428,15 +430,16 @@ ion-accordion-group {
   padding-top: 50px;
 }
 
-.professionnelles ion-label{
+.professionnelles ion-label {
   font-weight: lighter;
 }
 
-.scolaires ion-label{
+.scolaires ion-label {
   font-weight: lighter;
 }
 
-.professionnelles, .scolaires {
+.professionnelles,
+.scolaires {
   flex: 1;
   max-width: 48%;
   min-width: 300px;
@@ -477,12 +480,12 @@ ion-accordion[expanded] .icon-toggle {
 }
 
 // couleur au survol
-.accordion-header:hover{
+.accordion-header:hover {
   --background: #eab308;
   --color: rgb(255, 255, 255);
 }
 
-::content p{
+::content p {
   color: #ffffff;
 }
 
@@ -491,11 +494,12 @@ ion-accordion[expanded] .icon-toggle {
 
 // Section contact
 
-#contact{
+#contact {
   background-color: #222;
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 .contact-container {
   display: flex;
   flex-wrap: wrap;
@@ -506,11 +510,12 @@ ion-accordion[expanded] .icon-toggle {
   margin-bottom: 100px;
   animation: fadeIn 1s ease-in-out;
 }
+
 .contact-container ion-card-header {
   background-color: #022a5b;
 }
 
-.btn-send:hover{
+.btn-send:hover {
   --background: #eab308;
 }
 
@@ -545,7 +550,7 @@ ion-accordion[expanded] .icon-toggle {
 }
 
 
-.contact-info a{
+.contact-info a {
   text-decoration: none;
 }
 
@@ -580,8 +585,10 @@ ion-accordion[expanded] .icon-toggle {
 
 
 @media screen and (max-width: 768px) {
+
   // GESTION ACCEUIL
-  h1 , #txt-h{
+  h1,
+  #txt-h {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -599,75 +606,85 @@ ion-accordion[expanded] .icon-toggle {
 
   // GESTION DU SEGMENT
   ion-segment {
-  
-    padding-right: 80px; 
-    gap: 0; /* Si un espace (gap) est défini par défaut */
+
+    padding-right: 80px;
+    gap: 0;
+    /* Si un espace (gap) est défini par défaut */
   }
-  
+
   ion-segment-button {
     margin: 0;
     padding: 0;
   }
-  
-  
+
+
   // section competences responsive
   .skills-flex-container {
-      margin-left: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
-  .skill-card ion-card{
-      margin: 5px;
+  .skill-card {
+
+    justify-content: center;
+    margin: 0 auto;
+
   }
+
+
+  .skill-card ion-card {
+    margin: 1px;
+  }
+
 
   // section porjet responsive
   .projects-container {
-      flex-direction: column;
+    flex-direction: column;
   }
 
 
-// section experience responsive
-.experience-container {
-  flex-direction: column;
-  
-}
+  // section experience responsive
+  .experience-container {
+    flex-direction: column;
 
-.professionnelles {
-  margin: 0 auto;
-}
+  }
 
-.scolaires{
-  margin: 0 auto;
-}
+  .professionnelles {
+    margin: 0 auto;
+  }
+
+  .scolaires {
+    margin: 0 auto;
+  }
 
 
-  
+
 
 }
 
 /* Ajustement pour tablette */
 @media screen and (max-width: 1024px) {
-  #p-header{
+  #p-header {
     font-size: 2Opx;
   }
 
   // section competences responsive
   .skills-flex-container {
     margin: 0 auto;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-  
+
 
 }
 
 
- 
+
 // Add animations
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -677,6 +694,7 @@ ion-accordion[expanded] .icon-toggle {
   from {
     transform: translateY(100%);
   }
+
   to {
     transform: translateY(0);
   }
@@ -686,6 +704,7 @@ ion-accordion[expanded] .icon-toggle {
   from {
     transform: translateX(-100%);
   }
+
   to {
     transform: translateX(0);
   }
@@ -695,6 +714,7 @@ ion-accordion[expanded] .icon-toggle {
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(0);
   }
@@ -759,7 +779,12 @@ body {
   -o-transition: background 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 
   font-weight: 700;
 }
@@ -791,7 +816,7 @@ p {
     margin-bottom: 2rem;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 
     .skills-title {
       font-size: 2rem;
@@ -817,7 +842,8 @@ p {
       height: 100%;
       transform: scale(1.1);
       transition: transform 0.3s ease;
-      box-shadow: 0 4px 15px #575655;;
+      box-shadow: 0 4px 15px #575655;
+      ;
 
 
       ion-card-header {
@@ -867,8 +893,3 @@ p {
     }
   }
 }
-
-
-
-
-

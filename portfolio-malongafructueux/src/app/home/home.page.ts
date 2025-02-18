@@ -8,7 +8,7 @@ import emailjs from '@emailjs/browser';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: false,
-  
+
 })
 export class HomePage {
   name: string = '';
@@ -16,9 +16,9 @@ export class HomePage {
   message: string = '';
   formSubmitted: boolean = false;
   isLoading: boolean = false;
-  
 
-  constructor() {}
+
+  constructor() { }
 
   // mes compentences et leur icones dans ma liste
   competences = [
@@ -53,7 +53,7 @@ export class HomePage {
     {
       titre: 'Administration réseaux',
       items: [
-        { nom: 'Linux', icon: 'assets/icon/logo-linux.png',  progress: 0.7 }, // 85% pour Linux
+        { nom: 'Linux', icon: 'assets/icon/logo-linux.png', progress: 0.7 }, // 85% pour Linux
         { nom: 'Windows', icon: 'assets/icon/Windows 8.png', progress: 0.8 }, // 75% pour Windows Server
         { nom: 'Virtualisation', icon: 'assets/icon/icons8-lecteur-vmware-workstation-player-50.png', progress: 0.8 }, // 70% pour AWS, Docker
         { nom: 'CyberSécurité', icon: 'assets/icon/icons8-kali-linux-100.png', progress: 0.8 }, // 60% pour Nagios
@@ -92,7 +92,7 @@ export class HomePage {
   }
 
 
-  
+
   openProject(url: string) {
     window.open(url, '_blank'); // Ouvre le site dans un nouvel onglet
   }
@@ -154,7 +154,7 @@ export class HomePage {
     const options: IntersectionObserverInit = {
       threshold: 0.2,
     };
-  
+
     const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
       entries.forEach(entry => {
         const target = entry.target as HTMLElement;
@@ -168,7 +168,7 @@ export class HomePage {
         }
       });
     }, options);
-  
+
     sections.forEach(section => {
       section.style.opacity = '0';
       section.style.transform = 'translateY(50px)';
@@ -176,6 +176,6 @@ export class HomePage {
       observer.observe(section);
     });
   }
-  
-  
+
+
 }
