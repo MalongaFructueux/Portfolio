@@ -48,6 +48,20 @@
 }
 
 
+// floating design
+ion-fab-button {
+  --background: #02376b;
+  --background-activated: #eab308;
+  --background-hover: #eab308;
+  --color: white; // Couleur de l'icône
+
+  transition: background 0.3s ease-in-out;
+}
+
+ion-fab-button:hover {
+}
+
+
 // header
 ion-header {
   position: fixed;
@@ -595,28 +609,22 @@ ion-accordion[expanded] .icon-toggle {
 
   }
 
+  #presentation{
+    
+    background-position: center;
+    background-size: cover;
+  }
+
+
   // GESTION DU HEADER
-  ion-label {
-    font-size: 10px;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+  #menu-header {
+    display: none
+
   }
-
-  // GESTION DU SEGMENT
-  ion-segment {
-
-    padding-right: 80px;
-    gap: 0;
-    /* Si un espace (gap) est défini par défaut */
+  
+  ion-header{
+    display: none;
   }
-
-  ion-segment-button {
-    margin: 0;
-    padding: 0;
-  }
-
 
   // section competences responsive
   .skills-flex-container {
