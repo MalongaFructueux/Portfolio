@@ -1,3 +1,4 @@
+
 #presentation {
   text-align: center;
   padding: 2rem;
@@ -131,10 +132,23 @@ ion-segment-button ion-icon {
 
 
 // section acceuil
-#acceuil {}
+.callToAction-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+#apropos-p {
+  text-align: center;
+  padding: 330px 150px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
 
 #presentation {
-  padding: 330px 150px;
+  padding: 209px 150px;
   height: 100%;
   width: 100%;
   text-align: center;
@@ -143,6 +157,8 @@ ion-segment-button ion-icon {
   animation: fadeIn 1s ease-in-out;
   -webkit-animation: fadeIn 1s ease-in-out;
 }
+
+
 
 #presentation h1 {
   font-size: 50px;
@@ -197,6 +213,30 @@ ion-segment-button ion-icon {
 
 // section a propos
 
+.btn-projet{
+  margin-top: 50px;
+  background-color: #02376b;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  -ms-border-radius: 5;
+  -o-border-radius: 5;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-projet:hover {
+  background-color: #eab308;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
 .bg-color {
   background-color: #ffffff;
   border-radius: none;
@@ -212,8 +252,11 @@ h2 {
 }
 
 #apropos-p p {
+  text-align: center;
+  width: 100%;
+  height: 100%;
   font-size: 16px;
-  color: #333333;
+  color: #ffffff;
   font-weight: normal;
 }
 
@@ -228,346 +271,1070 @@ h2 {
 
 
 
-
-
-
-
-// section competences
-
-.skill-card ion-card-title {
-  text-align: center;
+// Design competences
+ 
+#competences h3{
+  color:  #02376b;
 }
 
-
-#skills-p {
-  text-align: center;
-  padding: 50px 100px;
-  padding-top: 10px;
-
-
-}
-
-.skills-section ion-card-header {
-  background-color: #02376b;
-}
-
-
-#skills {
-  padding: 50px 100px;
-  gap: 30px;
-  display: flex;
-  max-width: 900px;
-}
-
+.skills-table-wrapper:nth-child(1) .skill-progress { --progress-background: #1a73e8; } // Bleu
+.skills-table-wrapper:nth-child(2) .skill-progress { --progress-background: #34c759; } // Vert
+.skills-table-wrapper:nth-child(3) .skill-progress { --progress-background: #9c27b0; } // Violet
 .skills-section {
   padding: 20px;
-  background-color: #f9f9f9;
-  margin-top: 20px;
-  animation: fadeIn 1s ease-in-out;
-  -webkit-animation: fadeIn 1s ease-in-out;
+  background-color: #f4f5f8;
 }
 
-.skills-card {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-
-.skills-description {
-  font-size: 14px;
-  color: #ffffff;
+.section-title {
   text-align: center;
-  margin-top: 10px;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #02376b;
 }
 
-.skills-flex-container {
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills-tables {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 15px;
-  /* Espacement entre les cartes */
+  gap: 10px;
 }
 
-// card conetnu dans le card principale
-.skill-card {
-  display: flow-root flex;
+.skills-table-wrapper {
+  flex: 1;
+  max-width: 33%;
+}
+
+.skills-table-wrapper h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+.skills-table {
   width: 100%;
-  max-width: 250px;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skills-table th,
+.skills-table td {
+  padding: 6px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.skills-table th {
+  background-color: #e8f0fe;
+  font-weight: 600;
+}
+
+.skills-table td {
+  border-bottom: 1px solid #eee;
+}
+
+.skill-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.skill-progress {
+  height: 5px;
+  border-radius: 2px;
+  width: 80px;
+}
+
+// Tableau "Autres" avec scroll interne
+.skills-table-scrollable {
+  max-height: 250px; // Hauteur fixe ajustable selon votre écran cible
+  overflow-y: auto; // Défilement vertical activé
+}
+
+// Personnalisation de la scrollbar pour un look moderne
+.skills-table-scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+
+.skills-table-scrollable::-webkit-scrollbar-thumb {
+  background-color: #9c27b0; // Violet pour "Autres"
+  border-radius: 3px;
+}
+
+.skills-table-scrollable::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+// Responsive pour petits écrans
+@media (max-width: 768px) {
+  .skills-tables {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .skills-table-wrapper {
+    max-width: 100%;
+  }
+
+  .skills-table-scrollable {
+    max-height: 200px; // Réduction sur mobile si nécessaire
+  }
+}
+
+
+
+
+
+
+/* ========================================================================== */
+/* 🎨 SECTION PROJETS - LA VITRINE DE MES TALENTS 🎨 */
+/* ========================================================================== */
+#projets {
+  background-color: #fff; /* Fond blanc */
+  padding: 40px 20px; /* Espacement */
+  color: #02376b; /* Bleu signature */
+}
+
+/* --------------------------------- */
+/* 🌟 Titre qui annonce la couleur 🌟 */
+/* --------------------------------- */
+#projets .section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #02376b; /* Bleu profond */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --------------------------------- */
+/* 🔍 Filtres pour trier les trésors 🔍 */
+/* --------------------------------- */
+#projets .filters-container {
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
-ion-card {
-  border-radius: 10px;
+#projets .filters-container ion-segment {
+  --background: #02376b; /* Bleu sombre */
+  --indicator-color: #eab308; /* Jaune pour la sélection */
+  max-width: 500px;
+  border-radius: 25px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-ion-card-title {
-  font-size: 18px;
-  color: #ffffff;
-  font-weight: bold;
+#projets .filters-container ion-segment-button {
+  --color: #fff; /* Texte blanc */
+  --color-checked: #eab308; /* Jaune actif */
+  --padding-start: 15px;
+  --padding-end: 15px;
+  font-size: 1rem;
+  text-transform: capitalize;
 }
 
-ion-card-content {
-  padding: 10px;
-}
-
-ion-thumbnail img {
-  width: 30px;
-  height: 30px;
-}
-
-ion-progress-bar {
-  margin-top: 5px;
-  height: 8px;
-}
-
-@media (max-width: 768px) {
-  .skills-flex-container {
-    justify-content: center;
-    /* Centrer les cartes sur les petits écrans */
-  }
-
-  .skill-card {
-    width: 100%;
-    max-width: 200px;
-  }
-}
-
-
-
-
-
-
-
-// Section projet
-
-.projects-container {
+/* ========================================================================== */
+/* 🖼️ CONTENEUR DES CARTES - LA GALERIE DES STARS 🖼️ */
+/* ========================================================================== */
+#projets .projects-container {
   display: flex;
-  gap: 15px;
-  overflow-x: auto;
-  /* Permet le défilement horizontal sur mobile */
-  padding: 10px;
-  margin-bottom: 100px;
-  justify-content: center;
-}
-
-.project-card {
-  flex: 0 0 250px;
-  /* Taille fixe pour chaque carte */
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  min-width: 250px;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.card-background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  filter: brightness(0.7);
-
-
-}
-
-.card-background:hover {
-  filter: brightness(1);
-
-}
-
-.project-title {
-  position: relative;
-  color: white;
-  font-size: 1.2rem;
-  text-align: center;
-  z-index: 2;
-}
-
-
-
-
-
-// section experiences
-
-.title-experience {
-  font-size: 24px;
-  font-weight: bold;
-  color: #ffffff;
-  text-align: center;
-}
-
-#experience {
-  background-color: #222;
-  padding-bottom: 20px;
-}
-
-
-#exp {
-  padding: 50px 100px;
-  gap: 30px;
-  display: flex;
-  max-width: 900px;
-
-}
-
-
-.accordion-container {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-ion-accordion-group {
-  width: 100%;
-}
-
-.experience-container {
-  display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  margin-bottom: 100px;
+  justify-content: center;
+  padding: 0 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/* --------------------------------- */
+/* 🎴 CARTE DE PROJET - TOUT EST VISIBLE ! 🎴 */
+/* --------------------------------- */
+#projets .project-card {
+  flex: 0 0 320px; /* Largeur fixe */
+  max-width: 320px;
+  min-height: 600px; /* Hauteur minimale */
+  height: auto; /* S’adapte au contenu */
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff; /* Fond blanc */
+  box-shadow: 0 4px 15px rgba(2, 55, 107, 0.2); /* Ombre bleue */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeIn 1s ease-in-out;
-  padding-top: 50px;
 }
 
-.professionnelles ion-label {
-  font-weight: lighter;
+#projets .project-card:hover {
+  transform: translateY(-10px); /* Élévation */
+  box-shadow: 0 8px 25px rgba(2, 55, 107, 0.4); /* Ombre plus forte */
 }
 
-.scolaires ion-label {
-  font-weight: lighter;
+/* --------------------------------- */
+/* 🌠 IMAGE - LA STAR DU SHOW 🌠 */
+/* --------------------------------- */
+#projets .card-background {
+  position: relative;
+  width: 100%;
+  height: 250px; /* Hauteur fixe pour l’image */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.8);
+  transition: filter 0.3s ease;
 }
 
-.professionnelles,
-.scolaires {
+#projets .card-background:hover {
+  filter: brightness(1);
+}
+
+/* --------------------------------- */
+/* 📜 EN-TÊTE - TITRE ET SOUS-TITRE 📜 */
+/* --------------------------------- */
+#projets ion-card-header {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: rgba(2, 55, 107, 0.7); /* Fond bleu semi-transparent */
+  text-align: center;
+}
+
+#projets .project-title {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#projets ion-card-subtitle {
+  color: #eab308; /* Jaune */
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* --------------------------------- */
+/* 📝 CONTENU - TOUT BIEN RANGÉ 📝 */
+/* --------------------------------- */
+#projets ion-card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacement entre éléments */
+  color: #02376b; /* Texte bleu */
+  min-height: 300px; /* Hauteur minimale */
+  overflow-y: auto; /* Défilement si nécessaire */
+}
+
+/* --------------------------------- */
+/* ✍️ TEXTES - TOUT EST LISIBLE ✍️ */
+/* --------------------------------- */
+#projets .project-problem,
+#projets .project-role,
+#projets .project-results p {
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.4;
+  color: #02376b; /* Bleu pour tous les textes */
+}
+
+#projets .project-problem strong,
+#projets .project-role strong,
+#projets .project-results strong {
+  color: #eab308; /* Jaune pour les titres en gras */
+}
+
+/* --------------------------------- */
+/* 🛠️ MÉTHODOLOGIE - LISTE CLAIRE 🛠️ */
+/* --------------------------------- */
+#projets .project-methodology {
+  margin: 5px 0;
+}
+
+#projets .project-methodology p {
+  font-size: 0.9rem;
+  margin: 0 0 5px 0;
+  color: #02376b;
+}
+
+#projets .project-methodology p strong {
+  color: #eab308;
+}
+
+#projets .project-methodology ul {
+  padding-left: 15px;
+  margin: 0;
+}
+
+#projets .project-methodology li {
+  font-size: 0.85rem;
+  color: #02376b;
+  line-height: 1.3;
+}
+
+/* --------------------------------- */
+/* 💻 TECHNOLOGIES - PUCES VISIBLES 💻 */
+/* --------------------------------- */
+#projets .project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 5px 0;
+}
+
+#projets .project-tech ion-chip {
+  --background: #02376b;
+  --color: #fff;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+}
+
+#projets .project-tech ion-chip:hover {
+  --background: #eab308;
+  --color: #02376b;
+}
+
+/* --------------------------------- */
+/* 🚀 BOUTONS D’ACTION - CÔTE À CÔTE 🚀 */
+/* --------------------------------- */
+#projets .callToAction-btn {
+  display: flex; /* Flex pour aligner côte à côte */
+  flex-direction: row; /* Horizontal par défaut */
+  gap: 8px; /* Léger espace entre les boutons */
+  justify-content: center; /* Centré dans la carte */
+  margin-top: 10px;
+  flex-wrap: nowrap; /* Empêche le retour à la ligne si possible */
+}
+
+#projets .callToAction-btn .btn-projet {
+  --background: #02376b; /* Bleu */
+  --color: #fff; /* Texte blanc */
+  --border-radius: 8px;
+  --padding-start: 10px; /* Réduit pour gagner de la place */
+  --padding-end: 10px;
+  font-size: 0.8rem; /* Plus petit pour compacter */
+  text-transform: capitalize;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  flex: 1; /* Les boutons occupent un espace égal */
+  max-width: 140px; /* Limite la largeur pour rester compact */
+}
+
+#projets .callToAction-btn .btn-projet:hover {
+  --background: #eab308; /* Jaune au survol */
+  --color: #02376b;
+  transform: scale(1.05);
+}
+
+#projets .callToAction-btn .btn-projet ion-icon {
+  margin-right: 5px;
+}
+
+/* --------------------------------- */
+/* ⬅️➡️ NAVIGATION - TOUJOURS LÀ ⬅️➡️ */
+/* --------------------------------- */
+#projets .project-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding: 0 5px;
+}
+
+#projets .project-navigation .nav-btn {
+  background: transparent;
+  color: #02376b;
+  border: none;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#projets .project-navigation .nav-btn:hover {
+  color: #eab308;
+}
+
+#projets .project-navigation .nav-btn ion-icon {
+  vertical-align: middle;
+}
+
+/* --------------------------------- */
+/* ✨ ANIMATION D’ENTRÉE - TA-DA ! ✨ */
+/* --------------------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================================================== */
+/* 📱 RESPONSIVE - POUR TOUS LES ÉCRANS 📱 */
+/* ========================================================================== */
+@media (max-width: 768px) {
+  #projets .project-card {
+    flex: 0 0 280px;
+    min-height: 550px;
+  }
+
+  #projets .project-title {
+    font-size: 1.2rem;
+  }
+
+  #projets .callToAction-btn {
+    flex-direction: row; /* Reste horizontal sur tablette */
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  #projets .project-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  #projets .filters-container ion-segment {
+    width: 100%;
+  }
+
+  #projets .callToAction-btn {
+    flex-direction: column; /* Passe en vertical sur mobile */
+    gap: 10px;
+  }
+
+  #projets .callToAction-btn .btn-projet {
+    max-width: none; /* Pleine largeur sur mobile */
+  }
+}
+
+
+// fluidite ecran
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// section experiences
+/* Section globale */
+#experience {
+  background: linear-gradient(135deg,#1a3c73  0%, #1b2b3f 100%);
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+/* Titre de la section */
+.section-title-exp {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #eab308;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Conteneur de la timeline */
+.experience-timeline {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Carte d'expérience */
+.experience-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* En-tête de la carte */
+.experience-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #ffffff;
+  border-bottom: 2px solid #eab308;
+}
+
+.company-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-right: 15px;
+  border-radius: 8px;
+}
+
+ion-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #022a5b;
+}
+
+ion-card-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Contenu de la carte */
+ion-card-content {
+  padding: 20px;
+  color: #333;
+}
+
+.achievements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.achievements-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.achievements-list li::before {
+  content: '✓';
+  color: #eab308;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Métriques */
+.metrics-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #eaf5ff;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #022a5b;
+}
+
+.metric ion-icon {
+  color: #eab308;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.experience-card {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience-timeline {
+    padding: 0 15px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .company-logo {
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+
+
+// section formation 
+/* Section Formation uniquement */
+#formation {
+  background: linear-gradient(135deg,#eab308 0%, #9c7706 100%);
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+#formation .section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#formation .section-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #eab308;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Conteneur spécifique */
+#formation .education-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Cartes de formation et certifications */
+#formation .education-card,
+#formation .certification-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#formation .education-card:hover,
+#formation .certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* En-tête des cartes */
+#formation ion-card-header {
+  padding: 20px;
+  background: #ffffff;
+  border-bottom: 2px solid #eab308;
+}
+
+#formation ion-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #022a5b;
+}
+
+#formation ion-card-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Contenu des cartes */
+#formation ion-card-content {
+  padding: 20px;
+  color: #333;
+}
+
+#formation .education-description {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 15px 0;
+}
+
+#formation .skills-gained {
+  background: #eaf5ff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#formation .skills-gained strong {
+  color: #022a5b;
+}
+
+/* Section Certifications */
+#formation .certifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#formation .certification-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+#formation .certification-item:hover {
+  background: #f9f9f9;
+}
+
+#formation .certification-item ion-icon {
+  font-size: 24px;
+  color: #eab308;
+}
+
+#formation .certification-item h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #022a5b;
+  margin: 0;
+}
+
+#formation .certification-item p {
+  font-size: 14px;
+  color: #666;
+  margin: 4px 0 0 0;
+}
+
+#formation .certification-item a {
+  color: #eab308;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#formation .certification-item a:hover {
+  text-decoration: underline;
+}
+
+/* Animation spécifique */
+@keyframes fadeInFormation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#formation .education-card,
+#formation .certification-card {
+  animation: fadeInFormation 0.5s ease-out forwards;
+}
+
+/* Responsive spécifique */
+@media (max-width: 768px) {
+  #formation .education-container {
+    padding: 0 15px;
+  }
+
+  #formation .section-title {
+    font-size: 24px;
+  }
+
+  #formation ion-card-title {
+    font-size: 18px;
+  }
+
+  #formation .certification-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #formation .certification-item ion-icon {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+
+/* Section Contact uniquement */
+#contact {
+  background: linear-gradient(135deg, #000000 0%, #2b2b2b 100%);
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+#contact .section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#contact .section-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #eab308;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+#contact .contact-intro {
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+/* Conteneur principal */
+#contact .contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Partie Infos de contact */
+#contact .contact-info {
   flex: 1;
-  max-width: 48%;
   min-width: 300px;
 }
 
-ion-accordion-group {
-  width: 100%;
+#contact .contact-info ion-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Style de l'accordéon */
-.accordion-header {
-  --background: #f4f4f4;
-  --color: #222;
-  transition: background 0.3s, color 0.3s;
+#contact .contact-info ion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
 }
 
-/* Effet au survol */
-.accordion-header:hover {
-  --background: #e0e0e0;
-}
-
-/* Accordéon ouvert */
-ion-accordion[expanded] .accordion-header {
-  --background: white !important;
-  --color: #222 !important;
-}
-
-/* Changement d'icône */
-ion-accordion[expanded] .icon-toggle {
-  content: url("https://fonts.gstatic.com/s/i/materialicons/remove/v4/24px.svg");
-}
-
-/* Style par défaut */
-.accordion-header {
-  --background: #022a5b;
-  --color: rgb(255, 255, 255);
-  transition: background 0.3s, color 0.3s;
-}
-
-// couleur au survol
-.accordion-header:hover {
-  --background: #eab308;
-  --color: rgb(255, 255, 255);
-}
-
-::content p {
-  color: #ffffff;
-}
-
-
-
-
-// Section contact
-
-#contact {
-  background-color: #222;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px;
-  margin-bottom: 100px;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.contact-container ion-card-header {
-  background-color: #022a5b;
-}
-
-.btn-send:hover {
-  --background: #eab308;
-}
-
-.contact-info,
-.contact-form {
-  flex: 1;
-  min-width: 100px;
-}
-
-.contact-info ion-card {
+#contact .contact-info ion-card-header {
+  background: #ffffff;
+  padding: 15px;
+  border-bottom: 2px solid #eab308;
   text-align: center;
 }
 
-.contact-form ion-card {
-  width: 100%;
+#contact .contact-info ion-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #022a5b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-.linkedin-container {
+#contact .contact-info ion-card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+#contact .contact-info a {
+  color: #022a5b;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#contact .contact-info a:hover {
+  color: #eab308;
+}
+
+/* Réseaux professionnels */
+#contact .professional-networks {
   display: flex;
   justify-content: center;
+  gap: 20px;
+  padding: 15px;
+}
+
+#contact .network-icon ion-icon {
+  font-size: 28px;
+  color: #eab308;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#contact .network-icon:hover ion-icon {
+  transform: scale(1.2);
+  color: #ffffff;
+}
+
+/* Partie Formulaire */
+#contact .contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+#contact .contact-form ion-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact .contact-form ion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+#contact .contact-form ion-card-header {
+  background: #ffffff;
+  padding: 20px;
+  border-bottom: 2px solid #eab308;
+}
+
+#contact .contact-form ion-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #022a5b;
+  text-align: center;
+}
+
+#contact .contact-form ion-card-content {
+  padding: 20px;
+}
+
+#contact .contact-form ion-item {
+  --background: #fff;
+  --border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+#contact .contact-form ion-label {
+  color: #022a5b;
+  font-weight: 500;
+}
+
+#contact .contact-form ion-input,
+#contact .contact-form ion-textarea {
+  --padding-start: 10px;
+  --color: #333;
+}
+
+#contact .contact-form ion-button {
+  --background: #022a5b;
+  --border-radius: 8px;
+  --color: #ffffff;
+  margin-top: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#contact .contact-form ion-button:hover {
+  --background: #eab308;
+}
+
+#contact .contact-form ion-spinner {
+  margin-right: 10px;
+}
+
+#contact .success-message {
+  color: #022a5b;
+  background: #eaf5ff;
+  padding: 10px;
+  border-radius: 8px;
   margin-top: 15px;
+  text-align: center;
 }
 
-.linkedin-logo {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s ease;
+#contact .error-message {
+  color: #d32f2f;
+  background: #ffebee;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 15px;
+  text-align: center;
 }
 
-.linkedin-logo:hover {
-  transform: scale(1.1);
+/* Animation */
+@keyframes fadeInContact {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-
-.contact-info a {
-  text-decoration: none;
+#contact .contact-container {
+  animation: fadeInContact 0.5s ease-out forwards;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  #contact .contact-container {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  #contact .section-title {
+    font-size: 24px;
+  }
+
+  #contact .contact-info ion-card-title,
+  #contact .contact-form ion-card-title {
+    font-size: 16px;
+  }
+
+  #contact .contact-info,
+  #contact .contact-form {
+    min-width: 100%;
+  }
+}
 
 
 // footer

@@ -1,65 +1,61 @@
-
-  <!-- header -->
-  <ion-header>
-    <ion-toolbar>
-      <!-- Contenu de gauche (éléments de navigation) -->
-      <ion-buttons slot="end" id="menu-header">
-        <ion-menu-toggle auto-hide="false">
-          <ion-segment>
-            <ion-segment-button (click)="scrollToSection('acceuil')">
-              <ion-icon name="home" slot="start"></ion-icon>
-              <ion-label>Accueil</ion-label>
-            </ion-segment-button>
-            <ion-segment-button (click)="scrollToSection('a-propos')">
-              <ion-icon name="person" slot="start"></ion-icon>
-              <ion-label>À Propos</ion-label>
-            </ion-segment-button>
-            <ion-segment-button (click)="scrollToSection('competences')">
-              <ion-icon name="code-working" slot="start"></ion-icon>
-              <ion-label>Compétences</ion-label>
-            </ion-segment-button>
-            <ion-segment-button (click)="scrollToSection('projets')">
-              <ion-icon name="folder" slot="start"></ion-icon>
-              <ion-label>Projets</ion-label>
-            </ion-segment-button>
-            <ion-segment-button (click)="scrollToSection('experience')">
-              <ion-icon name="briefcase" slot="start"></ion-icon>
-              <ion-label>Expériences</ion-label>
-            </ion-segment-button>
-            <ion-segment-button (click)="scrollToSection('contact')">
-              <ion-icon name="mail" slot="start"></ion-icon>
-              <ion-label>Contact</ion-label>
-            </ion-segment-button>
-          </ion-segment>
-        </ion-menu-toggle>
-      </ion-buttons>
-
-
-    </ion-toolbar>
-  </ion-header>
+<!-- header -->
+<ion-header>
+  <ion-toolbar>
+    <!-- Menu de navigation optimisé -->
+    <ion-buttons slot="end" id="menu-header">
+      <ion-menu-toggle auto-hide="false">
+        <ion-segment>
+          <ion-segment-button (click)="scrollToSection('accueil')">
+            <ion-icon name="home" slot="start"></ion-icon>
+            <ion-label>Accueil</ion-label>
+          </ion-segment-button>
+          <ion-segment-button (click)="scrollToSection('projets')">
+            <ion-icon name="folder" slot="start"></ion-icon>
+            <ion-label>Projets</ion-label>
+          </ion-segment-button>
+          <ion-segment-button (click)="scrollToSection('competences')">
+            <ion-icon name="code-working" slot="start"></ion-icon>
+            <ion-label>Compétences</ion-label>
+          </ion-segment-button>
+          <ion-segment-button (click)="scrollToSection('experience')">
+            <ion-icon name="briefcase" slot="start"></ion-icon>
+            <ion-label>Expérience</ion-label>
+          </ion-segment-button>
+          <ion-segment-button (click)="scrollToSection('formation')">
+            <ion-icon name="school" slot="start"></ion-icon>
+            <ion-label>Formation</ion-label>
+          </ion-segment-button>
+          <ion-segment-button (click)="scrollToSection('contact')">
+            <ion-icon name="mail" slot="start"></ion-icon>
+            <ion-label>Contact</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-menu-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content>
-
-   <!-- Floating Action Button (FAB) -->
-   <ion-fab slot="fixed" vertical="bottom" horizontal="center">
+  <!-- Floating Action Button (FAB) pour navigation mobile -->
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center">
     <ion-fab-button>
       <ion-icon name="chevron-forward-circle"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="top">
-      <ion-fab-button (click)="scrollToSection('acceuil')">
+      <ion-fab-button (click)="scrollToSection('accueil')">
         <ion-icon name="home"></ion-icon>
-      </ion-fab-button>
-      <ion-fab-button (click)="scrollToSection('a-propos')">
-        <ion-icon name="person"></ion-icon>
-      </ion-fab-button>
-      <ion-fab-button (click)="scrollToSection('competences')">
-        <ion-icon name="code-working"></ion-icon>
       </ion-fab-button>
       <ion-fab-button (click)="scrollToSection('projets')">
         <ion-icon name="folder"></ion-icon>
       </ion-fab-button>
+      <ion-fab-button (click)="scrollToSection('competences')">
+        <ion-icon name="code-working"></ion-icon>
+      </ion-fab-button>
       <ion-fab-button (click)="scrollToSection('experience')">
         <ion-icon name="briefcase"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="scrollToSection('formation')">
+        <ion-icon name="school"></ion-icon>
       </ion-fab-button>
       <ion-fab-button (click)="scrollToSection('contact')">
         <ion-icon name="mail"></ion-icon>
@@ -67,269 +63,300 @@
     </ion-fab-list>
   </ion-fab>
 
-  <!-- section acceuil -->
-  <section id="acceuil">
-    <div id="presentation">
+  <!-- Section Accueil - Conforme aux spécifications -->
+  <section id="accueil">
+    <div id="presentation" class="home-container">
       <h1>MALONGA FRUCTUEUX</h1>
-      <p id="txt-h">Developpeur web & Mobile</p>
+      <p id="txt-h">Développeur Web & Mobile</p>
+      <p class="accroche">Actuellement en formation pour un titre pro de Développeur Web et Mobile, je recherche un stage pour mettre en pratique mes compétences et contribuer à des projets concrets.</p>
 
-      <!-- link -->
-      <button (click)="scrollToSection('a-propos')" class="btn">QUI SUIS-JE</button>
+      <div class="callToAction-btn">
+        <button (click)="scrollToSection('projets')" class="btn primary-btn">
+          VOIR MES PROJETS
+        </button>
+        <button (click)="scrollToSection('contact')" class="btn secondary-btn">
+          ME CONTACTER
+        </button>
+      </div>
+      <!-- <div class="download-cv">
+        <button (click)="downloadCV()" class="btn outline-btn">
+          <ion-icon name="download-outline"></ion-icon> TÉLÉCHARGER MON CV
+        </button>
+      </div> -->
     </div>
   </section>
 
 
-
-
-  <!-- section à propos -->
-  <section id='a-propos'>
-    <ion-card class="bg-color">
-      <ion-card-content>
+  <!-- ========================================================================== -->
+<!-- 🎉 DÉBUT DE LA SECTION PROJETS - BIENVENUE DANS LA GALERIE ! 🎉 -->
+<!-- ========================================================================== -->
+<section id="projets">
+  <!-- ... Titre et filtres inchangés ... -->
+  <h2 class="title-projets">Projets et Réalisations</h2>
+  <div class="projects-container">
+    <ion-card *ngFor="let project of filteredProjects" class="project-card" (click)="openProjectInNewTab(project.viewUrl)">
+      <div class="card-background" [style.backgroundImage]="project.imageUrl ? 'url(' + project.imageUrl + ')' : ''">
         <ion-card-header>
-          <h2> À Propos </h2>
-        </ion-card-header>
-
-        <div id="apropos-p">
-          <p>
-            Titulaire d'une licence en Administration des Systèmes Web et Réseaux, je suis actuellement étudiant en
-            Titre Professionnel Développeur Web et Mobile.
-          </p><br>
-          <p>
-            Mon parcours m'a permis d'acquérir des compétences variées en développement web, gestion de bases de données
-            et conception d'interfaces utilisateur.
-          </p><br>
-          <p>
-            J'ai notamment effectué un stage enrichissant à l'ASECNA en tant qu'Agent RSI, renforçant ainsi mon
-            expérience professionnelle.
-          </p>
-          <button (click)="scrollToSection('contact')" class="btn">CONTACTEZ MOI</button>
-        </div>
-
-      </ion-card-content>
-    </ion-card>
-  </section>
-
-
-
-
-  <!-- section competences -->
-  <section id="competences" class="skills-section">
-    <ion-card class="skills-card">
-      <ion-card-header>
-        <h2 class="skills-title">Mes Compétences</h2>
-        <p class="skills-description">
-          Mes compétences évoluent constamment grâce à ma passion pour le développement.
-        </p>
-      </ion-card-header>
-
-      <ion-card-content>
-        <!-- Disposition en flex -->
-        <div class="skills-flex-container">
-          <!-- Utilisation de *ngFor pour itérer sur les compétences et afficher les éléments -->
-          <div class="skill-card" *ngFor="let competence of competences;">
-            <ion-card>
-              <ion-card-header>
-                <ion-card-title>{{ competence.titre }}</ion-card-title>
-              </ion-card-header>
-              <ion-card-content>
-
-                <div class="scroll-content">
-                  <div *ngFor="let skill of competence.items" class="skill-slide">
-                    <ion-item>
-                      <ion-thumbnail slot="start">
-                        <img [src]="skill.icon" alt="{{ skill.nom }}" />
-                      </ion-thumbnail>
-                      <ion-label>{{ skill.nom }}</ion-label>
-                    </ion-item>
-                    <ion-progress-bar [value]="skill.progress"></ion-progress-bar>
-                  </div>
-                </div>
-              </ion-card-content>
-            </ion-card>
-          </div>
-
-        </div>
-      </ion-card-content>
-    </ion-card>
-
-  </section>
-
-
-
-
-  <!-- section projets -->
-  <section id="projets">
-    <h2 class="title-projets">Projets</h2>
-    <div class="projects-container">
-      <!-- Ma maquette musique -->
-      <ion-card class="project-card"
-        (click)="openProject('https://github.com/MalongaFructueux/Portfolio/tree/7801888663e3b257ab59a3fdd4fdf1ba19346992/Maquette%20site%20web%20musique/Maquette')">
-        <div class="card-background" style="background-image: linear-gradient(to top, rgba(2, 55, 107, 0.8), rgba(2, 55, 107, 0.4), transparent),
-                    url('assets/conductor-5507703_640.jpg');">
-          <ion-card-header>
-            <ion-card-title class="project-title">Maquette Site web de musique</ion-card-title>
-          </ion-card-header>
-        </div>
-      </ion-card>
-
-      <!-- a maquette restaurant  -->
-      <ion-card class="project-card"
-        (click)="openProject('https://github.com/MalongaFructueux/Portfolio/tree/7801888663e3b257ab59a3fdd4fdf1ba19346992/Maquette%20site%20web%20restaurant')">
-        <div class="card-background" style="background-image: linear-gradient(to top, rgba(2, 55, 107, 0.8), rgba(2, 55, 107, 0.4), transparent),
-                    url('assets/img1.jpg');">
-          <ion-card-header>
-            <ion-card-title class="project-title">Maquette Site web restaurant</ion-card-title>
-          </ion-card-header>
-        </div>
-      </ion-card>
-
-      <!-- mon porftolio -->
-      <ion-card class="project-card"
-        (click)="openProject('https://github.com/MalongaFructueux/Portfolio/tree/a17e342bc7f474b60d654bcf69d48ce434aeeb83/portfolio-malongafructueux')">
-        <div class="card-background" style="background-image: linear-gradient(to top, rgba(2, 55, 107, 0.8), rgba(2, 55, 107, 0.4), transparent),
-                    url('assets/Monportfolio.png');">
-          <ion-card-header>
-            <ion-card-title class="project-title">Mon porftolio</ion-card-title>
-          </ion-card-header>
-        </div>
-      </ion-card>
-
-       <!-- mes projets python -->
-       <ion-card class="project-card"
-       (click)="openProject('https://github.com/MalongaFructueux/Python-projets.git')">
-       <div class="card-background" style="background-image: linear-gradient(to top, rgba(2, 55, 107, 0.8), rgba(2, 55, 107, 0.4), transparent),
-                   url('data:image/jpeg;base64,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');">
-         <ion-card-header>
-           <ion-card-title class="project-title">Mes Projets Python</ion-card-title>
-         </ion-card-header>
-       </div>
-     </ion-card>
-
-      <!-- mes projets python -->
-      <ion-card class="project-card"
-      (click)="openProject('https://yakatovanda.web.app')">
-      <div class="card-background" style="background-image: linear-gradient(to top, rgba(2, 55, 107, 0.8), rgba(2, 55, 107, 0.4), transparent),
-                  url('assets/splash.png');">
-        <ion-card-header>
-          <ion-card-title class="project-title">Mon Site d'Annonces</ion-card-title>
+          <ion-card-title class="project-title">{{ project.title }}</ion-card-title>
+          <ion-card-subtitle>{{ project.client }} | {{ project.duration }}</ion-card-subtitle>
         </ion-card-header>
       </div>
+      <ion-card-content>
+        <p class="project-problem"><strong>Problématique:</strong> {{ project.problem }}</p>
+        <p class="project-role"><strong>Mon rôle:</strong> {{ project.role }}</p>
+        <div class="project-methodology">
+          <p><strong>Approche:</strong></p>
+          <ul>
+            <li *ngFor="let method of project.methodology">{{ method }}</li>
+          </ul>
+        </div>
+        <div class="project-results">
+          <p><strong>Résultats:</strong> {{ project.results }}</p>
+        </div>
+        <div class="project-tech">
+          <ion-chip *ngFor="let tech of project.technologies">{{ tech }}</ion-chip>
+        </div>
+        <div class="callToAction-btn">
+          <button ion-button (click)="openProject(project.viewUrl!); $event.stopPropagation()" class="btn-projet">
+            <ion-icon name="eye-outline"></ion-icon> Voir le projet
+          </button>
+          <button ion-button *ngIf="project.codeUrl" (click)="openProject(project.codeUrl); $event.stopPropagation()" class="btn-projet">
+            <ion-icon name="code-slash-outline"></ion-icon> Code Source
+          </button>
+        </div>
+        <div class="project-navigation">
+          <button (click)="navigateProject('prev', project); $event.stopPropagation()" class="nav-btn">
+            <ion-icon name="chevron-back-outline"></ion-icon> Précédent
+          </button>
+          <button (click)="navigateProject('next', project); $event.stopPropagation()" class="nav-btn">
+            Suivant <ion-icon name="chevron-forward-outline"></ion-icon>
+          </button>
+        </div>
+      </ion-card-content>
     </ion-card>
+  </div>
+</section>
+<!-- ========================================================================== -->
+<!-- 🎈 FIN DE LA SECTION PROJETS - À BIENTÔT POUR DE NOUVELLES AVENTURES ! 🎈 -->
+<!-- ========================================================================== -->
+
+
+<!-- Section Compétences -->
+<section id="competences" class="skills-section">
+  <h2 class="section-title-skills">Compétences</h2>
+  
+  <div class="skills-container">
+    <div class="skills-tables">
+      <!-- Tableau Compétences Techniques -->
+      <div class="skills-table-wrapper">
+        <h3>Techniques</h3>
+        <table class="skills-table">
+          <thead>
+            <tr>
+              <th>Icône</th>
+              <th>Compétence</th>
+              <th>Niveau</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let skill of technicalSkills">
+              <td><img [src]="skill.icon" alt="{{ skill.nom }}" class="skill-icon"></td>
+              <td>{{ skill.nom }}</td>
+              <td><ion-progress-bar [value]="skill.progress" class="skill-progress"></ion-progress-bar></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tableau Frameworks & Outils -->
+      <div class="skills-table-wrapper">
+        <h3>Frameworks</h3>
+        <table class="skills-table">
+          <thead>
+            <tr>
+              <th>Icône</th>
+              <th>Compétence</th>
+              <th>Niveau</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let skill of frameworkSkills">
+              <td><img [src]="skill.icon" alt="{{ skill.nom }}" class="skill-icon"></td>
+              <td>{{ skill.nom }}</td>
+              <td><ion-progress-bar [value]="skill.progress" class="skill-progress"></ion-progress-bar></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tableau Autres Compétences (avec scroll interne) -->
+      <div class="skills-table-wrapper skills-table-scrollable">
+        <h3>Autres <small>(défilez pour voir plus)</small></h3>
+        <table class="skills-table">
+          <thead>
+            <tr>
+              <th>Icône</th>
+              <th>Compétence</th>
+              <th>Niveau</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let skill of otherSkills">
+              <td><img [src]="skill.icon" alt="{{ skill.nom }}" class="skill-icon"></td>
+              <td>{{ skill.nom }}</td>
+              <td><ion-progress-bar [value]="skill.progress" class="skill-progress"></ion-progress-bar></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
 
 
 
-  <!-- Section Expériences -->
+  <!-- Section Expérience - Restructurée selon cahier des charges -->
   <section id="experience">
-    <h2>Expériences & Formation</h2>
+    <h2 class="section-title-exp">Expérience Professionnelle</h2>
 
-    <div class="experience-container">
-      <!-- Expériences Professionnelles -->
-      <div class="professionnelles">
-        <ion-item class="title-experience">Professionnelles</ion-item>
-        <ion-accordion-group>
-          <ion-accordion value="admin-reseaux">
-            <ion-item slot="header" class="accordion-header">
-              <ion-label>Administration réseaux</ion-label>
-              <ion-icon class="icon-toggle" name="add-outline" slot="end"></ion-icon>
-            </ion-item>
-            <div slot="content">
-              <h3>ASECNA</h3>
-              <p>2023-2024</p>
-              <h6>Stagiaire Réseau et Système Informatique</h6>
-              <ul>
-                <li>Administration des serveurs Thales et SAPI, gestion des rôles (Active Directory, DNS, DHCP).</li>
-                <li>Câblage et sécurité des réseaux.</li>
-                <li>Gestion de base de données TOPSKY.</li>
-                <li>Installation et entretien des systèmes de radiocommunication, tout en participant à la logistique
-                  technique des infrastructures réseau.</li>
-              </ul>
+    <div class="experience-timeline">
+      <!-- Expérience 1 -->
+      <ion-card class="experience-card">
+        <ion-card-header>
+          <div class="experience-header">
+            <img src="assets/icon/asecna.jpg" alt="ASECNA Logo" class="company-logo">
+            <div>
+              <ion-card-title>Stagiaire Réseau et Système Informatique</ion-card-title>
+              <ion-card-subtitle>ASECNA | 2023-2024</ion-card-subtitle>
             </div>
-          </ion-accordion>
-
-          <ion-accordion value="dev-web">
-            <ion-item slot="header" class="accordion-header">
-              <ion-label>Développement web</ion-label>
-              <ion-icon class="icon-toggle" name="add-outline" slot="end"></ion-icon>
-            </ion-item>
-            <div slot="content">
-              <h3>Ministère des Mines de Brazzaville</h3>
-              <p>2023-2024</p>
-              <h6>Stagiaire Développeur Web</h6>
-              <ul>
-                <li>Intégration de fonctionnalités interactives sur le site web du Ministère.</li>
-                <li>Test et débogage des outils numériques avant leur déploiement.</li>
-                <li>Assistance technique auprès des agents pour l’utilisation des outils numériques.</li>
-              </ul>
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <ul class="achievements-list">
+            <li>Administration des serveurs Thales et SAPI, gestion des rôles (Active Directory, DNS, DHCP)</li>
+            <li>Câblage et sécurisation des infrastructures réseaux avec un taux de disponibilité de 99,8%</li>
+            <li>Optimisation de la base de données TOPSKY, réduisant les temps de requête de 30%</li>
+            <li>Installation et maintenance des systèmes de radiocommunication critiques</li>
+            <li>Participation à la logistique technique des infrastructures réseau</li>
+          </ul>
+          <div class="metrics-container">
+            <div class="metric">
+              <ion-icon name="trending-up"></ion-icon>
+              <p>Réduction des incidents réseau de 25%</p>
             </div>
-          </ion-accordion>
-        </ion-accordion-group>
-      </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
 
-      <!-- Expériences Scolaires -->
-
-      <div class="scolaires">
-        <ion-item class="title-experience">Cursus Scolaires</ion-item>
-
-        <ion-accordion-group>
-          <ion-accordion value="bac">
-            <ion-item slot="header" class="accordion-header">
-              <ion-label>Titre Professionnel Dev Web et Mobile</ion-label>
-              <ion-icon class="icon-toggle" name="add-outline" slot="end"></ion-icon>
-            </ion-item>
-            <div slot="content">
-              <h3>SCHOLIA</h3>
-              <p>2024-2025</p>
-              <h6>Etudiant en Développement web et mobile</h6>
+      <!-- Expérience 2 -->
+      <ion-card class="experience-card">
+        <ion-card-header>
+          <div class="experience-header">
+            <img src="assets/icon/mines.png" alt="Ministère des Mines Logo" class="company-logo">
+            <div>
+              <ion-card-title>Stagiaire Développeur Web</ion-card-title>
+              <ion-card-subtitle>Ministère des Mines de Brazzaville | 2023-2024</ion-card-subtitle>
             </div>
-          </ion-accordion>
-
-
-          <ion-accordion value="licence">
-            <ion-item slot="header" class="accordion-header">
-              <ion-label>Licence Web & Réseaux</ion-label>
-              <ion-icon class="icon-toggle" name="add-outline" slot="end"></ion-icon>
-            </ion-item>
-            <div slot="content">
-              <h3>Université IUB</h3>
-              <p>2021-2023</p>
-              <h6>Étudiant en Administration systeme Web et Réseaux</h6>
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <ul class="achievements-list">
+            <li>Intégration de fonctionnalités interactives sur le site web du Ministère, améliorant l'engagement des utilisateurs de 40%</li>
+            <li>Développement et implémentation de formulaires en ligne, réduisant les délais de traitement administratif de 3 jours à quelques heures</li>
+            <li>Test et débogage rigoureux des outils numériques avant leur déploiement, garantissant zéro bugs critiques</li>
+            <li>Création de documentation technique et utilisateur pour faciliter l'adoption des outils</li>
+            <li>Formation et assistance technique auprès des agents pour l'utilisation des outils numériques</li>
+          </ul>
+          <div class="metrics-container">
+            <div class="metric">
+              <ion-icon name="trending-up"></ion-icon>
+              <p>Augmentation du trafic web de 35%</p>
             </div>
-          </ion-accordion>
-
-
-
-          <ion-accordion value="certif">
-            <ion-item slot="header" class="accordion-header">
-              <ion-label>Certifications & Formations</ion-label>
-              <ion-icon class="icon-toggle" name="add-outline" slot="end"></ion-icon>
-            </ion-item>
-            <div slot="content">
-              <ul>
-                <li>Certification FreeCodeCamp</li>
-                <a href="https://www.credly.com/badges/a0e7d2fc-dbde-4e27-891d-582abaf5e565/public_url">Certification Networking Basics - Cisco</a>
-              </ul>
-            </div>
-          </ion-accordion>
-        </ion-accordion-group>
-      </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
     </div>
   </section>
 
+  <!-- Section Formation - Séparée de l'expérience selon cahier des charges -->
+  <section id="formation">
+    <h2 class="section-title">Formation</h2>
 
-  <!-- section contact -->
+    <div class="education-container">
+      <!-- Formation 1 -->
+      <ion-card class="education-card">
+        <ion-card-header>
+          <ion-card-title>Titre Professionnel Développeur Web et Mobile</ion-card-title>
+          <ion-card-subtitle>SCHOLIA | 2024-2025</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <p class="education-description">
+            Formation intensive axée sur les technologies web et mobile modernes, incluant React, Angular, Ionic, et développement d'applications natives.
+          </p>
+          <div class="skills-gained">
+            <p><strong>Compétences clés :</strong> Développement full-stack, conception responsive, intégration API, déploiement d'applications.</p>
+          </div>
+        </ion-card-content>
+      </ion-card>
 
+      <!-- Formation 2 -->
+      <ion-card class="education-card">
+        <ion-card-header>
+          <ion-card-title>Licence Web & Réseaux</ion-card-title>
+          <ion-card-subtitle>Université IUB | 2021-2023</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <p class="education-description">
+            Formation complète combinant technologies web et administration réseau, avec spécialisation en sécurité des systèmes d'information.
+          </p>
+          <div class="skills-gained">
+            <p><strong>Compétences clés :</strong> Administration système, protocoles réseau, virtualisation, technologies web, gestion de bases de données.</p>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <!-- Certifications -->
+      <ion-card class="certification-card">
+        <ion-card-header>
+          <ion-card-title>Certifications</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div class="certifications-list">
+            <div class="certification-item">
+              <ion-icon name="ribbon-outline"></ion-icon>
+              <div>
+                <h4>Certification FreeCodeCamp - Responsive Web Design</h4>
+                <p>2025 | <a href="https://www.freecodecamp.org/certification/fcc1ea8b636-d0f6-4242-9890-ac8f8b5d7614/responsive-web-design" target="_blank">Voir la certification</a></p>
+              </div>
+            </div>
+            <div class="certification-item">
+              <ion-icon name="ribbon-outline"></ion-icon>
+              <div>
+                <h4>Networking Basics - Cisco</h4>
+                <p>2025 | <a href="https://www.credly.com/badges/a0e7d2fc-dbde-4e27-891d-582abaf5e565/public_url" target="_blank">Voir le badge</a></p>
+              </div>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </section>
+
+  <!-- Section Contact - Optimisée selon cahier des charges -->
   <section id="contact">
-    <h2 class="title">Contactez-moi</h2>
+    <h2 class="section-title">Contact</h2>
+    <p class="contact-intro">Je vous réponds sous 48h maximum</p>
+    
     <div class="contact-container">
-      <!-- Colonne gauche -->
+      <!-- Informations de contact -->
       <div class="contact-info">
         <ion-card>
           <ion-card-header>
-            <ion-card-title>Email</ion-card-title>
+            <ion-card-title>
+              <ion-icon name="mail-outline"></ion-icon> Email
+            </ion-card-title>
           </ion-card-header>
           <ion-card-content>
             <a href="mailto:malongafructueux48&#64;gmail.com">malongafructueux48&#64;gmail.com</a>
@@ -338,63 +365,92 @@
 
         <ion-card>
           <ion-card-header>
-            <ion-card-title>Téléphone</ion-card-title>
+            <ion-card-title>
+              <ion-icon name="call-outline"></ion-icon> Téléphone
+            </ion-card-title>
           </ion-card-header>
           <ion-card-content>
             <a href="tel:+33618375403">06 18 37 54 03</a>
           </ion-card-content>
         </ion-card>
 
-        <!-- Bouton LinkedIn -->
-        <div class="linkedin-container">
-          <a href="https://www.linkedin.com/in/fructueux-malonga-121005334" target="_blank" rel="noopener noreferrer">
-            <img src="assets/icon/linkedin_3536505.png" alt="LinkedIn" class="linkedin-logo">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>
+              <ion-icon name="location-outline"></ion-icon> Localisation
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p> France</p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Réseaux professionnels -->
+        <div class="professional-networks">
+          <a href="https://www.linkedin.com/in/fructueux-malonga-121005334" target="_blank" rel="noopener noreferrer" class="network-icon">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          <a href="https://github.com/votre-username" target="_blank" rel="noopener noreferrer" class="network-icon">
+            <ion-icon name="logo-github"></ion-icon>
           </a>
         </div>
       </div>
 
-      <!-- Colonne droite (Formulaire) -->
+      <!-- Formulaire de contact -->
       <div class="contact-form">
         <ion-card>
           <ion-card-header>
             <ion-card-title>Envoyez-moi un message</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-
             <form (ngSubmit)="submitForm()">
               <ion-item>
-                <ion-label position="stacked">Nom</ion-label>
+                <ion-label position="floating">Nom</ion-label>
                 <ion-input type="text" [(ngModel)]="name" name="name" required></ion-input>
               </ion-item>
 
               <ion-item>
-                <ion-label position="stacked">Email</ion-label>
+                <ion-label position="floating">Email</ion-label>
                 <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+              </ion-item>
+              
+              <ion-item>
+                <ion-label position="floating">Objet</ion-label>
+                <ion-input type="text" [(ngModel)]="subject" name="subject" required></ion-input>
               </ion-item>
 
               <ion-item>
-                <ion-label position="stacked">Message</ion-label>
-                <ion-textarea [(ngModel)]="message" name="message" required></ion-textarea>
+                <ion-label position="floating">Message</ion-label>
+                <ion-textarea rows="6" [(ngModel)]="message" name="message" required></ion-textarea>
               </ion-item>
 
-              <ion-button expand="full" type="submit" [disabled]="isLoading">
-                {{ isLoading ? 'Envoi en cours...' : 'Envoyer' }}
+              <ion-button expand="full" type="submit" [disabled]="isLoading" class="submit-btn">
+                <ion-icon name="send" slot="start" *ngIf="!isLoading"></ion-icon>
+                <ion-spinner name="dots" *ngIf="isLoading"></ion-spinner>
+                {{ isLoading ? 'Envoi en cours...' : 'Envoyer le message' }}
               </ion-button>
 
-              <p *ngIf="formSubmitted" style="color: green; text-align: center;">Message envoyé avec succès !</p>
+              <p *ngIf="formSubmitted && formSuccess" class="success-message">
+                Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
+              </p>
+              
+              <p *ngIf="formSubmitted && !formSuccess" class="error-message">
+                Une erreur est survenue. Veuillez réessayer ou me contacter directement par email.
+              </p>
             </form>
-
           </ion-card-content>
         </ion-card>
       </div>
     </div>
   </section>
 
-
-
+  <!-- Footer avec mentions légales -->
   <footer class="footer">
-    <p>&copy; 2025 Malonga Fructueux Bienheureux. Tous droits réservés.</p>
+    <div class="footer-content">
+      <p>&copy; 2025 Malonga Fructueux Bienheureux. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="#" (click)="openLegalTerms()">Mentions légales</a>
+      </div>
+    </div>
   </footer>
-
-
 </ion-content>

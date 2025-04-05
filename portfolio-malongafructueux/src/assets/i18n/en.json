@@ -1,0 +1,25 @@
+{
+  "HOME": {
+    "TITLE": "MALONGA FRUCTUEUX",
+    "SUBTITLE": "Web & Mobile Developer",
+    "ACCROCHE": "Currently training for a Web and Mobile Developer professional title, I am looking for an internship to apply my skills and contribute to real-world projects.",
+    "CONTACT_ME": "CONTACT ME"
+  },
+  "PROJECTS": {
+    "TITLE": "Projects and Achievements",
+    "PROBLEM": "Problem",
+    "ROLE": "My Role",
+    "APPROACH": "Approach",
+    "RESULTS": "Results",
+    "VIEW": "View Project",
+    "CODE": "Source Code",
+    "PREV": "Previous",
+    "NEXT": "Next"
+  },
+  "CONTACT": {
+    "FORM_ALERT": "Please fill in all required fields!"
+  },
+  "FOOTER": {
+    "LEGAL_TEXT": "Legal Notices: This site was created by Malonga Fructueux. All rights reserved."
+  }
+}

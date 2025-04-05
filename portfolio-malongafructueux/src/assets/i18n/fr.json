@@ -1,0 +1,25 @@
+{
+  "HOME": {
+    "TITLE": "MALONGA FRUCTUEUX",
+    "SUBTITLE": "Développeur Web & Mobile",
+    "ACCROCHE": "Actuellement en formation pour un titre pro de Développeur Web et Mobile, je recherche un stage pour mettre en pratique mes compétences et contribuer à des projets concrets.",
+    "CONTACT_ME": "ME CONTACTER"
+  },
+  "PROJECTS": {
+    "TITLE": "Projets et Réalisations",
+    "PROBLEM": "Problématique",
+    "ROLE": "Mon rôle",
+    "APPROACH": "Approche",
+    "RESULTS": "Résultats",
+    "VIEW": "Voir le projet",
+    "CODE": "Code Source",
+    "PREV": "Précédent",
+    "NEXT": "Suivant"
+  },
+  "CONTACT": {
+    "FORM_ALERT": "Veuillez remplir tous les champs obligatoires !"
+  },
+  "FOOTER": {
+    "LEGAL_TEXT": "Mentions légales : Ce site est créé par Malonga Fructueux. Tous droits réservés."
+  }
+}
