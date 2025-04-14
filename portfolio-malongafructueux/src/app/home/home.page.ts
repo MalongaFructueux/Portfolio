@@ -278,7 +278,5 @@ export class HomePage implements AfterViewInit {
       observer.observe(section);
     });
   }
-
-
   
 }
