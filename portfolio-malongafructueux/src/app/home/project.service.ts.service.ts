@@ -7,21 +7,6 @@ import { Project } from './projet.model';
 export class ProjectService {
   private projects: Project[] = [
     {
-      id: '4', // ID unique requis
-      title: 'Maquette Site web de musique',
-      category: 'web', // Ajouté pour le filtrage
-      client: 'Projet personnel', // Ajouté
-      duration: '1 mois', // Ajouté
-      problem: 'Créer une interface utilisateur pour un site de streaming musical', // Ajouté
-      role: 'Développeur front-end', // Ajouté
-      methodology: ['Design responsive', 'Prototypage Figma', 'HTML/CSS'], // Ajouté
-      results: 'Maquette fonctionnelle avec navigation fluide', // Ajouté
-      technologies: ['HTML', 'CSS'], // Ajouté
-      imageUrl: 'assets/conductor-5507703_640.jpg',
-      codeUrl: 'https://github.com/MalongaFructueux/maquette-site-de-musique.git',
-      viewUrl: 'https://malongafructueux.github.io/maquette-site-de-musique/',
-    },
-    {
       id: '3', // ID unique requis
       title: 'Maquette Site web restaurant',
       category: 'web', // Ajouté pour le filtrage
